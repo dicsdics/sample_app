@@ -1,9 +1,31 @@
 # adding this fixes the issue
 require 'tzinfo'
 
-# Initialize the rails application
+# Load the Rails application.
+require File.expand_path('../application', __FILE__)
+
+# Initialize the Rails application.
 Rails.application.initialize!
 
-KEY_1 = "aghtbjki"
-SHARED_SECRET_1 = "plkjuvfe"
-KEY_2 = "ljfebjyf"
+
+
+
+
+
+
+
+
+
+# adding this fixes the issue
+#require 'tzinfo'
+
+# Initialize the rails application
+#Rails.application.initialize!
+#Rails.initialize!
+
+
+#KEY_1 = "abcd"
+#SHARED_SECRET_1 = "123123"
+#KEY_2 = "1232412"
+
+
