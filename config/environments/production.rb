@@ -1,4 +1,5 @@
 SampleApp::Application.configure do
+  #mattr_accessor :dump_schema_after_migration
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -78,5 +79,5 @@ SampleApp::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+  #config.active_record.dump_schema_after_migration = false
 end
