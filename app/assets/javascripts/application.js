@@ -13,6 +13,6 @@
 //= require jquery
 //= require bootstrap
 //= require jquery_ujs
+//= require microposts
 
-//= require turbolinks
 //= require_tree .

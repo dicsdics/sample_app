@@ -31,6 +31,24 @@ describe "Static pages" do
           expect(page).to have_selector("li##{item.id}", text: item.content)
         end
       end
+	  
+	  describe "micropost counts" do
+		before { click_link "delete", match: :first }
+		it "should be singular when count eq to 1" do
+		  expect(page).to have_selector("span", text: "1 micropost")
+        end
+      end
+	  
+	  describe "follower/following counts" do
+        let(:other_user) { FactoryGirl.create(:user) }
+        before do
+          other_user.follow!(user)
+          visit root_path
+        end
+
+        it { should have_link("0 following", href: following_user_path(user)) }
+        it { should have_link("1 followers", href: followers_user_path(user)) }
+      end
     end
   end
 
